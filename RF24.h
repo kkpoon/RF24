@@ -166,50 +166,6 @@ protected:
   uint8_t get_status(void);
 
   /**
-   * Decode and print the given status to stdout
-   *
-   * @param status Status value to print
-   *
-   * @warning Does nothing if stdout is not defined.  See fdevopen in stdio.h
-   */
-  void print_status(uint8_t status);
-
-  /**
-   * Decode and print the given 'observe_tx' value to stdout
-   *
-   * @param value The observe_tx value to print
-   *
-   * @warning Does nothing if stdout is not defined.  See fdevopen in stdio.h
-   */
-  void print_observe_tx(uint8_t value);
-
-  /**
-   * Print the name and value of an 8-bit register to stdout
-   *
-   * Optionally it can print some quantity of successive
-   * registers on the same line.  This is useful for printing a group
-   * of related registers on one line.
-   *
-   * @param name Name of the register
-   * @param reg Which register. Use constants from nRF24L01.h
-   * @param qty How many successive registers to print
-   */
-  void print_byte_register(const char* name, uint8_t reg, uint8_t qty = 1);
-
-  /**
-   * Print the name and value of a 40-bit address register to stdout
-   *
-   * Optionally it can print some quantity of successive
-   * registers on the same line.  This is useful for printing a group
-   * of related registers on one line.
-   *
-   * @param name Name of the register
-   * @param reg Which register. Use constants from nRF24L01.h
-   * @param qty How many successive registers to print
-   */
-  void print_address_register(const char* name, uint8_t reg, uint8_t qty = 1);
-
-  /**
    * Turn on or off the special features of the chip
    *
    * The chip has certain 'features' which are only available when the 'features'
@@ -523,13 +479,6 @@ public:
    *  Methods you can use to drive the chip in more advanced ways 
    */
   /**@{*/
-
-  /**
-   * Print a giant block of debugging information to stdout
-   *
-   * @warning Does nothing if stdout is not defined.  See fdevopen in stdio.h
-   */
-  void printDetails(void);
 
   /**
    * Enter low-power mode
